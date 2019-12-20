@@ -91,7 +91,11 @@ public class ReferenceApplicationActivator extends BaseModuleActivator {
 	
 	        appFrameworkService.disableApp("registrationapp.basicRegisterPatient");
 	        appFrameworkService.disableApp("coreapps.awaitingAdmission");
-	
+		      appFrameworkService.disableExtension("org.openmrs.module.coreapps.mostRecentVitals.clinicianDashboardFirstColumn");
+		      appFrameworkService.disableExtension("org.openmrs.module.coreapps.mostRecentVitals.clinicianDashboardSecondColumn");
+		      appFrameworkService.disableExtension("org.openmrs.module.attachments.patientDashboard.secondColumnFragments.att");
+		      appFrameworkService.disableExtension("org.openmrs.module.allergyui.patientDashboard.secondColumnFragments");
+
 	        administrationService.saveGlobalProperty(new GlobalProperty("registrationcore.patientNameSearch",
 	                "registrationcore.ExistingPatientNameSearch"));
 	
